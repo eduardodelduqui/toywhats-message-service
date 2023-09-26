@@ -16,7 +16,8 @@ module.exports.authenticate = (socket, next) => {
 
     socket.user = {
       name: decoded.name,
-      phone: decoded.phone
+      phone: decoded.phone,
+      salt: decoded.salt
     }
     next()
   })

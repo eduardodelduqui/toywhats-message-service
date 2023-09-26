@@ -5,7 +5,7 @@ const socketIo = require('socket.io');
 const { authenticate } = require('./authenticate')
 const cors = require('cors')
 
-const PORT = env.parsed.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 const app = express();
 app.use(cors());

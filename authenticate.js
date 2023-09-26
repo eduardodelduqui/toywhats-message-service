@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 
 module.exports.authenticate = (socket, next) => {
   const token = socket.handshake.auth.token
-  const SECRET_KEY = env.parsed.SECRET_KEY
+  const SECRET_KEY = process.env.SECRET_KEY
 
   if (!token) {
     return next(new Error('Token not provided'))
